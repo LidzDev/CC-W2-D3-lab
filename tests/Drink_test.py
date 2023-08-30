@@ -1,8 +1,9 @@
 import unittest
-from src.Drink import Drink
+from src.drink import Drink
 
 class TestDrink(unittest.TestCase):
 
     def setUp(self):
-        self.Pub = ("Cider", 2)
-        
+        self.Drink = ("Cider", 2)
+    
+
