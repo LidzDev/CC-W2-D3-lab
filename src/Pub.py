@@ -5,10 +5,11 @@ class Pub:
         self.drinks = []
 
     def sell_drink(self, input_drink, input_customer_age):
-        if input_customer_age >= 21:
+        if self.check_age(input_customer_age):
             self.increase_till(input_drink.price)
-        else:
-            False
+        
+    def check_age(self, input_age):
+        return(input_age >= 21)       
 
     def add_drink(self, input_drink):
         self.drinks.append(input_drink)
