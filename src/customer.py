@@ -1,3 +1,4 @@
+from src.pub import Pub
 class Customer:
 
     def __init__(self, input_name, input_wallet, input_age):
@@ -9,5 +10,7 @@ class Customer:
     def pay(self, input_amount):
         self.wallet -= input_amount
     
-    def buy_drink(self, input_drink):
-        self.pay(input_drink.price)
+    def buy_drink(self, input_drink, input_age):
+        if (Pub.sell_drink(input_drink, input_age)):
+            self.pay(input_drink.price)
+        

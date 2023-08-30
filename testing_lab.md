@@ -16,12 +16,12 @@ The task for this lab is to plan and create an object oriented model of a Pub, w
 
 MVP:
 
-  - A `Drink` should have a `name`, and a `price`
-  - A `Pub` should have a `name`, a `till`, and a collection of `drinks` containing instances of class `Drink`
-  - A `Customer` should have a `name`, and a `wallet`
-    - A `Customer` should have method which reduces the wallet by a specified amount as a parameter
-  - A `Customer` should be able to buy a `Drink` and reduce their wallet by the `Drink`'s price.
-  - A `Pub` should be able to sell a drink to a customer and increase it's `till` by the price of `Drink`. Hint: Use a `Customer` method you already have.
+ V - A `Drink` should have a `name`, and a `price`
+ V - A `Pub` should have a `name`, a `till`, and a collection of `drinks` containing instances of class `Drink`
+ V - A `Customer` should have a `name`, and a `wallet`
+ V - A `Customer` should have method which reduces the wallet by a specified amount as a parameter
+V  - A `Customer` should be able to buy a `Drink` and reduce their wallet by the `Drink`'s price.
+ V - A `Pub` should be able to sell a drink to a customer and increase it's `till` by the price of `Drink`. Hint: Use a `Customer` method you already have.
 
 Extensions:
 

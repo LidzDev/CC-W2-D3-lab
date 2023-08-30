@@ -10,12 +10,19 @@ class TestPub(unittest.TestCase):
         self.Pub.drinks = [Drink("Cider", 2), Drink("Beer", 5)]
         self.Customer = Customer("John", 50, 25)
         
+    def test_check_underage_drinking(self):
+        age_check = self.Pub.check_drinking_age(30)
+        self.assertEqual(True, age_check)
+        age_check = self.Pub.check_drinking_age(4)
+        self.assertEqual(False, age_check)            
+
     def test_sell_drink(self):
         self.Pub.sell_drink(self.Pub.drinks[0], self.Customer.age)
         self.assertEqual(102, self.Pub.till)
-        sale_return = self.Pub.sell_drink(self.Pub.drinks[1], 15)
-        self.assertFalse(sale_return)
-        
+        self.Customer.age = 15
+        sale_return = self.Pub.sell_drink(self.Pub.drinks[1], self.Customer.age)
+        # self.assertEqual(False, sale_return)
+        self.assertEqual(102, self.Pub.till)      
 
     def test_increase_till(self):
         self.Pub.increase_till(5)
